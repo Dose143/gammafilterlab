@@ -1,4 +1,4 @@
 fastapi
 uvicorn
-python-mulitpart
+python-mulitpart==0.0.9
 jinja2
