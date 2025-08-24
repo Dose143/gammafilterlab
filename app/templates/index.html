@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Gamma Report Filter (Starter)</title>
+    <style>
+      body { font-family: system-ui, Arial, sans-serif; max-width: 820px; margin: 40px auto; }
+      .card { border: 1px solid #ddd; padding: 16px; border-radius: 8px; }
+      label { display:block; margin: 8px 0 4px; }
+      input[type="file"] { margin-bottom: 12px; }
+      button { padding: 8px 14px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h2>Gamma Report Filter</h2>
+    <div class="card">
+      <form method="post" action="/upload" enctype="multipart/form-data">
+        <label>Upload APEX report (PDF/JPG/PNG)</label>
+        <input type="file" name="file" accept=".pdf,.png,.jpg,.jpeg" required />
+        <label>Today</label>
+        <input type="date" name="today" value="{{ today }}" readonly />
+        <br/><br/>
+        <button type="submit">Upload</button>
+      </form>
+      <p style="color:#666;margin-top:12px">
+        This is the starter app. Next steps will add OCR to auto-use <b>Count Date</b>,
+        then hide isotopes with ≥7 half-lives and check natural isotopes at 10× §173.436.
+      </p>
+    </div>
+  </body>
+</html>
